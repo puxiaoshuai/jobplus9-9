@@ -10,6 +10,7 @@ DB_URI = "mysql://{}@{}:{}/{}?charset=utf8".format(USERNAME, HOSTNAME, PORT, DAT
 
 
 
+
 class BaseConfig(object):
     SECRET_KEY = "2018xxxxx"
     SQLALCHEMY_TRACK_MODIFICATIONS = False
