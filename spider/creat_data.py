@@ -3,13 +3,9 @@ from jobplus.models import User, Company, Job, db
 from jobplus import create_app
 from faker import Faker
 
-
 app = create_app("development")
 app.app_context().push()
 faker = Faker()
-
-
-
 
 # 生成一个用户boss
 def create_boss(company):
