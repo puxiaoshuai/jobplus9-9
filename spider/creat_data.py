@@ -9,6 +9,8 @@ app.app_context().push()
 faker = Faker()
 
 
+
+
 # 生成一个用户boss
 def create_boss(company):
     user = User(username="boss", email='123456789@qq.com', password='123456', role=User.ROLE_BOSS)
