@@ -58,6 +58,7 @@ class Company(BaseModel):
 
     id = db.Column(db.Integer, primary_key=True, autoincrement=True)
 
+
     name = db.Column(db.String(64))  # 公司名字
     address = db.Column(db.String(256))  # 公司地址
     net_site = db.Column(db.String(64))  # 网站
@@ -72,6 +73,7 @@ class Company(BaseModel):
 
     def __repr__(self):
         return self.name
+
 
 
 class Job(BaseModel):

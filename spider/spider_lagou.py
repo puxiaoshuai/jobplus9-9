@@ -101,7 +101,6 @@ class LanGou(object):
             'introduce': "暂无简介",
             'address': address_one+address_tow+address_three.strip(),
             'company_scale':company_scale.strip()
-
         }
         print(job)
         self.jobs.append(job)
