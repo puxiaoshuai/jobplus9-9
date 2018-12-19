@@ -4,7 +4,9 @@ HOSTNAME = '127.0.0.1'
 PORT = "3306"
 DATABASE = "plus_job"
 USERNAME = "root"
+
 DB_URI = "mysql://{}@{}:{}/{}?charset=utf8".format(USERNAME, HOSTNAME, PORT, DATABASE)
+
 
 
 class BaseConfig(object):
