@@ -56,6 +56,7 @@ class User(BaseModel, UserMixin):
 class Company(BaseModel):
     __tablename__ = 'company'
     id = db.Column(db.Integer, primary_key=True, autoincrement=True)
+
     name = db.Column(db.String(64))  # 公司名字
     address = db.Column(db.String(256))  # 公司地址
     net_site = db.Column(db.String(64))  # 网站
@@ -66,8 +67,6 @@ class Company(BaseModel):
     financing = db.Column(db.String(54))  # 融资
     company_field = db.Column(db.String(128))  # 领域
     company_scale = db.column(db.String(128))  # 规模大小
-
-
 
     def __repr__(self):
         return self.name

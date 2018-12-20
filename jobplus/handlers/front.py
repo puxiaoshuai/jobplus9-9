@@ -63,14 +63,5 @@ def register_user():
         return redirect(url_for('.login'))
     return render_template('register_user.html', form=form)
 
-@front.route("/company/")
-def company_list():
-    page=request.args.get("page",default=1,type=int)
-    pagination=Company.query.paginate(
-        page=page,
-        per_page=9,
-        error_out=False
-    )
 
-    return render_template('companylist.html',pagination=pagination)
 
