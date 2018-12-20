@@ -69,6 +69,7 @@ class Company(BaseModel):
     company_field = db.Column(db.String(128))  # 领域
     company_scale = db.column(db.String(128))  # 规模大小
 
+
     def __repr__(self):
         return self.name
 

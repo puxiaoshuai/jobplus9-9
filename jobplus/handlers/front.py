@@ -1,3 +1,4 @@
+
 from flask import (Blueprint, render_template, redirect,
                    url_for, flash, request, abort)
 from jobplus.forms import LoginForm, RegisterForm
@@ -61,6 +62,8 @@ def register_user():
         flash('注册成功，请登录！', 'success')
         return redirect(url_for('.login'))
     return render_template('register_user.html', form=form)
+
+
 
 
 
