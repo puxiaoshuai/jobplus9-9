@@ -81,7 +81,6 @@ class Job(BaseModel):
     study_experience = db.Column(db.String(54))  # 学历要求
     work_tags = db.Column(db.String(128))  # 职位标签
     salary_range = db.Column(db.String(54))  # 薪酬范围
-    # company = db.relationship('User', uselist=False, backref=db.backref('jobs', lazy='dynamic'))
     company_id = db.Column(db.Integer, db.ForeignKey("company.id"))
     company_msg = db.relationship("Company", backref="job")
 
