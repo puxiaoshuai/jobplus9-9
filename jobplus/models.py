@@ -73,6 +73,7 @@ class Company(BaseModel):
 
 
 
+
 class Job(BaseModel):
     __tablename__ = 'job'
     id = db.Column(db.Integer, primary_key=True, autoincrement=True)

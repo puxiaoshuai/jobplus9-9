@@ -45,8 +45,8 @@ def item_jobs():
 
 def main():
     jobs, companys = item_jobs()
-    # user = create_boss(companys[0])
-    # db.session.add(user)
+    user = create_boss(companys[0])
+    db.session.add(user)
     for job in jobs:
         db.session.add(job)
     for com in companys:
