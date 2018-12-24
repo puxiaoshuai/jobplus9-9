@@ -5,11 +5,13 @@ from jobplus.forms import LoginForm, RegisterForm
 from flask_login import login_user, logout_user, login_required
 from ..models import User, Company, Job
 
+
 front = Blueprint("front", __name__)
 
 
 @front.route("/")
 def index():
+
     commpanys = Company.query.limit(current_app.config['COMPANY_PER_PAGE'])
     jobs = Job.query.limit(current_app.config['JOB_PER_PAGE'])
     data = {
@@ -17,6 +19,7 @@ def index():
         'jobs': jobs
     }
     return render_template('index.html', **data)
+
 
 
 @front.route("/login", methods=["GET", "POST"])
